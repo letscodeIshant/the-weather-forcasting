@@ -8,7 +8,6 @@ import { transformDateFormat } from './utilities/DatetimeUtils';
 import UTCDatetime from './components/Reusable/UTCDatetime';
 import LoadingBox from './components/Reusable/LoadingBox';
 import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
-import Logo from './assets/logo.png';
 import ErrorBox from './components/Reusable/ErrorBox';
 import { ALL_DESCRIPTIONS } from './utilities/DateConstants';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -180,31 +179,8 @@ function App() {
               marginBottom: '1rem',
             }}
           >
-            <Box
-              component="img"
-              sx={{
-                height: { xs: '16px', sm: '22px', md: '26px' },
-                width: 'auto',
-              }}
-              alt="logo"
-              src={Logo}
-            />
-
+            <h1 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>The weather app</h1>
             <UTCDatetime />
-            <Link
-              href="https://github.com/Amin-Awinti"
-              target="_blank"
-              underline="none"
-              sx={{ display: 'flex' }}
-            >
-              <GitHubIcon
-                sx={{
-                  fontSize: { xs: '20px', sm: '22px', md: '26px' },
-                  color: 'white',
-                  '&:hover': { color: '#2d95bd' },
-                }}
-              />
-            </Link>
           </Box>
           <Search onSearchChange={searchChangeHandler} />
         </Grid>
